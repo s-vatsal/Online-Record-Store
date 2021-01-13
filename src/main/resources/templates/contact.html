@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>The Record Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="@{'css/main.css'}">
+</head>
+
+<body>
+
+<div th:include="layout::header"></div>
+
+<section id = "content">
+    <h1>Contact Us: Enter Details Below</h1>
+    <h2>Hit Submit To Email!</h2>
+
+        <form action="mailto:admin@darksideoftherainbow.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" aria-describedby="fullNameHelp"
+                       placeholder="Name">
+                <small id="fullNameHelp" class="form-text text-muted">Enter Full Name</small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp"
+                       placeholder="Email">
+                <small id="emailHelp" class="form-text text-muted">Enter Email</small>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" aria-describedby="subjectHelp"
+                       placeholder="Subject">
+                <small id="subjectHelp" class="form-text text-muted">Enter Subject</small>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <input type="text" class="form-control" id="message" name="message" aria-describedby="messageHelp"
+                       placeholder="Message">
+                <small id="messageHelp" class="form-text text-muted">Enter Message</small>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="reset" class="btn btn-light">Clear</button>
+        </form>
+
+</section>
+
+<div th:include="layout::footer"></div>
+
+</body>
+</html>

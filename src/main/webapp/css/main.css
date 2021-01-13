@@ -1,0 +1,43 @@
+body{
+    background-color: sandybrown;
+    padding: 5px;
+}
+
+img.logo{
+    display: block;
+    float: right;
+    height: 200px;
+}
+
+img.logo2{
+    display: block;
+    float: right;
+    height: 400px;
+    margin-left: 100px;
+    margin-bottom: 200px;
+    margin-right: 200px;
+}
+
+section#content{
+    min-height: 500px;
+    margin-bottom: 200px;
+    padding: 10px;
+}
+
+div#login-box{
+    float: right;
+    margin-left: 10px;
+}
+
+form#discount{
+    margin-left: 100px;
+}
+
+h6#text{
+    margin-top: 5px;
+    margin-left: 90px;
+}
+
+
+
+
